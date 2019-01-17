@@ -5,6 +5,7 @@
 
 * **3.28:** Criação do projeto React ([a8ca369](https://github.com/PedroBarata/react-complete-guide-max/commit/a8ca369))
 * **3.32:** Criando um componente funcional ([b3c75ae](https://github.com/PedroBarata/react-complete-guide-max/commit/b3c75ae))
+* **3.36:** Trabalhando com props ([341b97c](https://github.com/PedroBarata/react-complete-guide-max/commit/341b97c))
 
 
 
