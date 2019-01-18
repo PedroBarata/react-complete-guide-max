@@ -64,9 +64,19 @@ class App extends Component {
       buttonStyle.backgroundColor = "red";
     }
 
+    const classes = [];
+
+    if(this.state.persons.length <= 1) {
+      classes.push('red') //classes = ['red'];
+    }
+    if(this.state.persons.length <= 0) {
+      classes.push('bold') //classes = ['red', 'bold'];
+    }
+
     return (
       <div className="App">
         <h1>Hi!</h1>
+        <p className={classes.join(' ')}>Test with dynamic classes!</p>
         {/* Arrow Functions here could be inefficient!!! */}
         <button style={buttonStyle} onClick={this.togglePersonsHandler}>
           Toggle Persons!

@@ -3,3 +3,11 @@
   margin: 0;
   font-family: sans-serif;
 }
+
+.red {
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
+}
