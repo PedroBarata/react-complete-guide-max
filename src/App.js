@@ -23,9 +23,7 @@ class App extends Component {
   };
 
   removePerson = index => {
-    const persons = this.state.persons;
-    /* É apenas um ponteiro, logo, removendo da constante, 
-    estaremos removendo do state também! */
+    const persons = [...this.state.persons];
     persons.splice(index, 1);
     this.setState({ persons: persons });
   };
