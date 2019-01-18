@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import classes from "./App.css";
 import Person from "./Person/Person";
 class App extends Component {
   state = {
@@ -63,19 +63,19 @@ class App extends Component {
       buttonStyle.backgroundColor = "red";
     }
 
-    const classes = [];
+    const objectClassesCss = [];
 
     if (this.state.persons.length <= 1) {
-      classes.push("red"); //classes = ['red'];
+      objectClassesCss.push(classes.red); //classes = ['red'];
     }
     if (this.state.persons.length <= 0) {
-      classes.push("bold"); //classes = ['red', 'bold'];
+      objectClassesCss.push(classes.bold); //classes = ['red', 'bold'];
     }
 
     return (
-      <div className="App">
+      <div className={classes.App}>
         <h1>Hi!</h1>
-        <p className={classes.join(" ")}>Test with dynamic classes!</p>
+        <p className={objectClassesCss.join(' ')}>Test with dynamic classes!</p>
         {/* Arrow Functions here could be inefficient!!! */}
         <button style={buttonStyle} onClick={this.togglePersonsHandler}>
           Toggle Persons!
