@@ -33,16 +33,10 @@ class App extends Component {
   };
 
   render() {
-    const buttonStyle = {
-      backgroundColor: "green",
-      color: "white",
-      border: "1px solid red",
-      font: "inherit",
-      padding: "10px",
-      cursor: "pointer"
-    };
 
     let persons = null;
+
+    let btnClass = '';
 
     if (this.state.isShow) {
       persons = (
@@ -60,7 +54,7 @@ class App extends Component {
           })}
         </div>
       );
-      buttonStyle.backgroundColor = "red";
+      btnClass = classes.Red
     }
 
     const objectClassesCss = [];
@@ -77,7 +71,7 @@ class App extends Component {
         <h1>Hi!</h1>
         <p className={objectClassesCss.join(' ')}>Test with dynamic classes!</p>
         {/* Arrow Functions here could be inefficient!!! */}
-        <button style={buttonStyle} onClick={this.togglePersonsHandler}>
+        <button className={btnClass} onClick={this.togglePersonsHandler}>
           Toggle Persons!
         </button>
         {persons}
