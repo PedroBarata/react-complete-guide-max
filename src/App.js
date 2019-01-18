@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import Person from "./Person/Person";
-import Radium, { StyleRoot } from "radium";
 class App extends Component {
   state = {
     persons: [
@@ -40,11 +39,7 @@ class App extends Component {
       border: "1px solid red",
       font: "inherit",
       padding: "10px",
-      cursor: "pointer",
-      ":hover": {
-        backgroundColor: "lightgreen",
-        color: "black"
-      }
+      cursor: "pointer"
     };
 
     let persons = null;
@@ -66,10 +61,6 @@ class App extends Component {
         </div>
       );
       buttonStyle.backgroundColor = "red";
-      buttonStyle[":hover"] = {
-        backgroundColor: "salmon",
-        color: "lightblue"
-      };
     }
 
     const classes = [];
@@ -82,19 +73,17 @@ class App extends Component {
     }
 
     return (
-      <StyleRoot>
-        <div className="App">
-          <h1>Hi!</h1>
-          <p className={classes.join(" ")}>Test with dynamic classes!</p>
-          {/* Arrow Functions here could be inefficient!!! */}
-          <button style={buttonStyle} onClick={this.togglePersonsHandler}>
-            Toggle Persons!
-          </button>
-          {persons}
-        </div>
-      </StyleRoot>
+      <div className="App">
+        <h1>Hi!</h1>
+        <p className={classes.join(" ")}>Test with dynamic classes!</p>
+        {/* Arrow Functions here could be inefficient!!! */}
+        <button style={buttonStyle} onClick={this.togglePersonsHandler}>
+          Toggle Persons!
+        </button>
+        {persons}
+      </div>
     );
   }
 }
 
-export default Radium(App);
+export default App;
