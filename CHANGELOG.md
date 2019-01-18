@@ -14,6 +14,17 @@
 * **3.45:** Adding Two Way Binding ([a9b2643](https://github.com/PedroBarata/react-complete-guide-max/commit/a9b2643))
 * **3.46:** Adding Style with Stylesheets ([3107c52](https://github.com/PedroBarata/react-complete-guide-max/commit/3107c52))
 * **3.47:** Working with Inline Styles ([92602c0](https://github.com/PedroBarata/react-complete-guide-max/commit/92602c0))
+* **4.50:** Rendering Content Conditionally ([cf1720d](https://github.com/PedroBarata/react-complete-guide-max/commit/cf1720d))
+* **4.51:** Handling Dynamic Content "The JavaScript Way" ([5328116](https://github.com/PedroBarata/react-complete-guide-max/commit/5328116))
+* **4.53:** Outputting Lists ([d62b460](https://github.com/PedroBarata/react-complete-guide-max/commit/d62b460))
+* **4.54:** Lists & State ([7cb6376](https://github.com/PedroBarata/react-complete-guide-max/commit/7cb6376))
+* **4.55:** Updating State Immutably ([dcd7e86](https://github.com/PedroBarata/react-complete-guide-max/commit/dcd7e86))
+* **4.56:** Lists & Keys ([7527533](https://github.com/PedroBarata/react-complete-guide-max/commit/7527533))
+* **4.57:** Flexible Lists ([4b8c3db](https://github.com/PedroBarata/react-complete-guide-max/commit/4b8c3db))
+* **5.62:** Setting Styles Dynamically ([eaad51a](https://github.com/PedroBarata/react-complete-guide-max/commit/eaad51a))
+* **5.63:** Setting Class name Dynamically ([a118a9e](https://github.com/PedroBarata/react-complete-guide-max/commit/a118a9e))
+* **5.64:** Adding and Using Radium ([220fa85](https://github.com/PedroBarata/react-complete-guide-max/commit/220fa85))
+* **5.65:** Using Radium for media queries ([368c984](https://github.com/PedroBarata/react-complete-guide-max/commit/368c984))
 
 
 
