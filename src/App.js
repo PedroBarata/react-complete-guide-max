@@ -8,12 +8,6 @@ class App extends Component {
     isShow: false
   };
 
-  switchNameHandler = myNewName => {
-    this.setState({
-      persons: [{ name: myNewName, age: 25 }, { name: "Test", age: 40 }]
-    });
-  };
-
   nameChangedHander = event => {
     this.setState({
       persons: [
@@ -26,6 +20,14 @@ class App extends Component {
   togglePersonsHandler = () => {
     const togglePersons = this.state.isShow;
     this.setState({ isShow: !togglePersons });
+  };
+
+  removePerson = index => {
+    const persons = this.state.persons;
+    /* É apenas um ponteiro, logo, removendo da constante, 
+    estaremos removendo do state também! */
+    persons.splice(index, 1);
+    this.setState({ persons: persons });
   };
 
   render() {
@@ -42,11 +44,14 @@ class App extends Component {
     if (this.state.isShow) {
       persons = (
         <div>
-          {this.state.persons.map(person => {
-            return <Person
-              name={person.name}
-              age={person.age}
-            />
+          {this.state.persons.map((person, index) => {
+            return (
+              <Person
+                click={() => this.removePerson(index)}
+                name={person.name}
+                age={person.age}
+              />
+            );
           })}
         </div>
       );
