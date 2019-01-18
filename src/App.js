@@ -37,14 +37,10 @@ class App extends Component {
       cursor: "pointer"
     };
 
-    return (
-      <div className="App">
-        <h1>Hi!</h1>
-        {/* Arrow Functions here could be inefficient!!! */}
-        <button style={buttonStyle} onClick={this.togglePersonsHandler}>
-          Toggle Persons!
-        </button>
-        { this.state.isShow ?
+    let persons = null;
+
+    if (this.state.isShow) {
+      persons = (
         <div>
           <Person
             click={this.switchNameHandler.bind(this, "Pedroooww!")}
@@ -58,8 +54,18 @@ class App extends Component {
           >
             My hobbies: Racing{" "}
           </Person>
-        </div> : null
-        }
+        </div>
+      );
+    }
+
+    return (
+      <div className="App">
+        <h1>Hi!</h1>
+        {/* Arrow Functions here could be inefficient!!! */}
+        <button style={buttonStyle} onClick={this.togglePersonsHandler}>
+          Toggle Persons!
+        </button>
+        {persons}
       </div>
     );
   }
