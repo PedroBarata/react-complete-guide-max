@@ -35,7 +35,8 @@ class App extends Component {
 
   render() {
     const buttonStyle = {
-      backgroundColor: "white",
+      backgroundColor: "green",
+      color: "white",
       border: "1px solid red",
       font: "inherit",
       padding: "10px",
@@ -60,6 +61,7 @@ class App extends Component {
           })}
         </div>
       );
+      buttonStyle.backgroundColor = "red";
     }
 
     return (
