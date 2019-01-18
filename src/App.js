@@ -5,19 +5,21 @@ import Person from "./Person/Person";
 class App extends Component {
   state = {
     persons: [
-      { id:'sadasd1', name: "Pedro", age: 25 }, 
-      { id:'asdfwe1', name: "Test", age: 30 }
+      { id: "sadasd1", name: "Pedro", age: 25 },
+      { id: "asdfwe1", name: "Test", age: 30 }
     ],
     isShow: false
   };
 
-  nameChangedHander = event => {
-    this.setState({
-      persons: [
-        { name: "Pedro", age: 25 },
-        { name: event.target.value, age: 40 }
-      ]
-    });
+  nameChangedHander = (event, id) => {
+    const personIndex = this.state.persons.findIndex(p => p.id === id);
+    const person = { ...this.state.persons[personIndex] };
+
+    person.name = event.target.value;
+    const persons = [...this.state.persons];
+    persons[personIndex] = person;
+
+    this.setState({ persons: persons });
   };
 
   togglePersonsHandler = () => {
@@ -52,6 +54,7 @@ class App extends Component {
                 key={person.id}
                 name={person.name}
                 age={person.age}
+                changed={event => this.nameChangedHander(event, person.id)}
               />
             );
           })}
