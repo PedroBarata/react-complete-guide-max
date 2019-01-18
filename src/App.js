@@ -4,7 +4,10 @@ import Person from "./Person/Person";
 
 class App extends Component {
   state = {
-    persons: [{ name: "Pedro", age: 25 }, { name: "Test", age: 30 }],
+    persons: [
+      { id:'sadasd1', name: "Pedro", age: 25 }, 
+      { id:'asdfwe1', name: "Test", age: 30 }
+    ],
     isShow: false
   };
 
@@ -46,6 +49,7 @@ class App extends Component {
             return (
               <Person
                 click={() => this.removePerson(index)}
+                key={person.id}
                 name={person.name}
                 age={person.age}
               />
