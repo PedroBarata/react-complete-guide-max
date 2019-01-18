@@ -4,7 +4,8 @@ import Person from "./Person/Person";
 
 class App extends Component {
   state = {
-    persons: [{ name: "Pedro", age: 25 }, { name: "Test", age: 30 }]
+    persons: [{ name: "Pedro", age: 25 }, { name: "Test", age: 30 }],
+    isShow: false
   };
 
   switchNameHandler = myNewName => {
@@ -22,6 +23,11 @@ class App extends Component {
     });
   };
 
+  togglePersonsHandler = () => {
+    const togglePersons = this.state.isShow;
+    this.setState({ isShow: !togglePersons });
+  };
+
   render() {
     const buttonStyle = {
       backgroundColor: "white",
@@ -35,21 +41,25 @@ class App extends Component {
       <div className="App">
         <h1>Hi!</h1>
         {/* Arrow Functions here could be inefficient!!! */}
-        <button style={buttonStyle} onClick={() => this.switchNameHandler("Pedrooo!")}>
-          Change name!
+        <button style={buttonStyle} onClick={this.togglePersonsHandler}>
+          Toggle Persons!
         </button>
-        <Person
-          click={this.switchNameHandler.bind(this, "Pedroooww!")}
-          name={this.state.persons[0].name}
-          age={this.state.persons[0].age}
-        />
-        <Person
-          name={this.state.persons[1].name}
-          age={this.state.persons[1].age}
-          changed={this.nameChangedHander}
-        >
-          My hobbies: Racing{" "}
-        </Person>
+        { this.state.isShow ?
+        <div>
+          <Person
+            click={this.switchNameHandler.bind(this, "Pedroooww!")}
+            name={this.state.persons[0].name}
+            age={this.state.persons[0].age}
+          />
+          <Person
+            name={this.state.persons[1].name}
+            age={this.state.persons[1].age}
+            changed={this.nameChangedHander}
+          >
+            My hobbies: Racing{" "}
+          </Person>
+        </div> : null
+        }
       </div>
     );
   }
