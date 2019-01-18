@@ -25,6 +25,10 @@
 * **5.63:** Setting Class name Dynamically ([a118a9e](https://github.com/PedroBarata/react-complete-guide-max/commit/a118a9e))
 * **5.64:** Adding and Using Radium ([220fa85](https://github.com/PedroBarata/react-complete-guide-max/commit/220fa85))
 * **5.65:** Using Radium for media queries ([368c984](https://github.com/PedroBarata/react-complete-guide-max/commit/368c984))
+* **5.67:** Enabling and Using CSS Modules ([9f46361](https://github.com/PedroBarata/react-complete-guide-max/commit/9f46361))
+* **5.67:** Remoção do código do Radium ([62996ca](https://github.com/PedroBarata/react-complete-guide-max/commit/62996ca))
+* **5.69:** Adding Pseudo Selectors ([91e0cc4](https://github.com/PedroBarata/react-complete-guide-max/commit/91e0cc4))
+* **5.70:** Working with media queries ([a3f2378](https://github.com/PedroBarata/react-complete-guide-max/commit/a3f2378))
 
 
 
