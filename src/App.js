@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Person from "./Person/Person";
-import Radium from 'radium';
+import Radium, { StyleRoot } from "radium";
 class App extends Component {
   state = {
     persons: [
@@ -41,9 +41,9 @@ class App extends Component {
       font: "inherit",
       padding: "10px",
       cursor: "pointer",
-      ':hover': {
-        backgroundColor: 'lightgreen',
-        color: 'black'
+      ":hover": {
+        backgroundColor: "lightgreen",
+        color: "black"
       }
     };
 
@@ -66,31 +66,33 @@ class App extends Component {
         </div>
       );
       buttonStyle.backgroundColor = "red";
-      buttonStyle[':hover'] = {
-        backgroundColor: 'salmon',
-        color: 'lightblue'
-      }
+      buttonStyle[":hover"] = {
+        backgroundColor: "salmon",
+        color: "lightblue"
+      };
     }
 
     const classes = [];
 
-    if(this.state.persons.length <= 1) {
-      classes.push('red') //classes = ['red'];
+    if (this.state.persons.length <= 1) {
+      classes.push("red"); //classes = ['red'];
     }
-    if(this.state.persons.length <= 0) {
-      classes.push('bold') //classes = ['red', 'bold'];
+    if (this.state.persons.length <= 0) {
+      classes.push("bold"); //classes = ['red', 'bold'];
     }
 
     return (
-      <div className="App">
-        <h1>Hi!</h1>
-        <p className={classes.join(' ')}>Test with dynamic classes!</p>
-        {/* Arrow Functions here could be inefficient!!! */}
-        <button style={buttonStyle} onClick={this.togglePersonsHandler}>
-          Toggle Persons!
-        </button>
-        {persons}
-      </div>
+      <StyleRoot>
+        <div className="App">
+          <h1>Hi!</h1>
+          <p className={classes.join(" ")}>Test with dynamic classes!</p>
+          {/* Arrow Functions here could be inefficient!!! */}
+          <button style={buttonStyle} onClick={this.togglePersonsHandler}>
+            Toggle Persons!
+          </button>
+          {persons}
+        </div>
+      </StyleRoot>
     );
   }
 }
