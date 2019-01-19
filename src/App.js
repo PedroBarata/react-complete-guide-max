@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import classes from "./App.css";
 import Person from "./Person/Person";
+import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
+
 class App extends Component {
   state = {
     persons: [
@@ -33,28 +35,28 @@ class App extends Component {
   };
 
   render() {
-
     let persons = null;
 
-    let btnClass = '';
+    let btnClass = "";
 
     if (this.state.isShow) {
       persons = (
         <div>
           {this.state.persons.map((person, index) => {
             return (
-              <Person
-                click={() => this.removePerson(index)}
-                key={person.id}
-                name={person.name}
-                age={person.age}
-                changed={event => this.nameChangedHander(event, person.id)}
-              />
+              <ErrorBoundary key={person.id}>
+                <Person
+                  click={() => this.removePerson(index)}
+                  name={person.name}
+                  age={person.age}
+                  changed={event => this.nameChangedHander(event, person.id)}
+                />
+              </ErrorBoundary>
             );
           })}
         </div>
       );
-      btnClass = classes.Red
+      btnClass = classes.Red;
     }
 
     const objectClassesCss = [];
@@ -69,7 +71,7 @@ class App extends Component {
     return (
       <div className={classes.App}>
         <h1>Hi!</h1>
-        <p className={objectClassesCss.join(' ')}>Test with dynamic classes!</p>
+        <p className={objectClassesCss.join(" ")}>Test with dynamic classes!</p>
         {/* Arrow Functions here could be inefficient!!! */}
         <button className={btnClass} onClick={this.togglePersonsHandler}>
           Toggle Persons!
