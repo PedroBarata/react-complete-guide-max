@@ -1,4 +1,4 @@
-# 0.1.0 (2019-01-19)
+# 0.1.0 (2019-01-21)
 
 
 ### Features
@@ -30,6 +30,7 @@
 * **5.69:** Adding Pseudo Selectors ([91e0cc4](https://github.com/PedroBarata/react-complete-guide-max/commit/91e0cc4))
 * **5.70:** Working with media queries ([a3f2378](https://github.com/PedroBarata/react-complete-guide-max/commit/a3f2378))
 * **6.76:** Using Error Boundaries (React 16+) ([c975a83](https://github.com/PedroBarata/react-complete-guide-max/commit/c975a83))
+* **6.76:** Volta do código do 6.67 ([2a86599](https://github.com/PedroBarata/react-complete-guide-max/commit/2a86599))
 
 
 
