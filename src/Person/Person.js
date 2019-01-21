@@ -6,12 +6,6 @@ const person = props => {
         tem o método criado do onChange sendo passado como referência (por isso, não
         conseguimos mudar o valor do primeiro campo, inclusive). Este erro, é apenas
         para lembrar que a propriedade "value" não poderá ser alterada! */
-
-  const rnd = Math.random();
-
-  if (rnd > 0.7) {
-    throw new Error("Something went wrong!");
-  }
   return (
     <div className={classes.Person}>
       <p onClick={props.click}>
