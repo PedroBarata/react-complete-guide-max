@@ -1,4 +1,4 @@
-# 0.1.0 (2019-01-21)
+# 0.1.0 (2019-01-29)
 
 
 ### Features
@@ -31,6 +31,8 @@
 * **5.70:** Working with media queries ([a3f2378](https://github.com/PedroBarata/react-complete-guide-max/commit/a3f2378))
 * **6.76:** Using Error Boundaries (React 16+) ([c975a83](https://github.com/PedroBarata/react-complete-guide-max/commit/c975a83))
 * **6.76:** Volta do código do 6.67 ([2a86599](https://github.com/PedroBarata/react-complete-guide-max/commit/2a86599))
+* **6.80:** A Better Project Structure ([eb45cfe](https://github.com/PedroBarata/react-complete-guide-max/commit/eb45cfe))
+* **7.81:** Splitting an App Into Components ([dd90c71](https://github.com/PedroBarata/react-complete-guide-max/commit/dd90c71))
 
 
 
