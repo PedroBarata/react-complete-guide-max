@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import classes from "./App.css";
-import Person from "../components/Persons/Person/Person";
-
+import Persons from "../components/Persons/Persons";
+import Cockpit from "../components/Cockpit/Cockpit";
 class App extends Component {
   state = {
     persons: [
@@ -36,43 +36,21 @@ class App extends Component {
   render() {
     let persons = null;
 
-    let btnClass = "";
-
     if (this.state.isShow) {
-      persons = (
-        <div>
-          {this.state.persons.map((person, index) => {
-            return (
-              <Person
-                click={() => this.removePerson(index)}
-                name={person.name}
-                age={person.age}
-                changed={event => this.nameChangedHander(event, person.id)}
-              />
-            );
-          })}
-        </div>
-      );
-      btnClass = classes.Red;
+      persons = <Persons
+          persons={this.state.persons}
+          clicked={this.removePerson}
+          changed={this.nameChangedHander} />
     }
 
-    const objectClassesCss = [];
-
-    if (this.state.persons.length <= 1) {
-      objectClassesCss.push(classes.red); //classes = ['red'];
-    }
-    if (this.state.persons.length <= 0) {
-      objectClassesCss.push(classes.bold); //classes = ['red', 'bold'];
-    }
+   
 
     return (
       <div className={classes.App}>
-        <h1>Hi!</h1>
-        <p className={objectClassesCss.join(" ")}>Test with dynamic classes!</p>
-        {/* Arrow Functions here could be inefficient!!! */}
-        <button className={btnClass} onClick={this.togglePersonsHandler}>
-          Toggle Persons!
-        </button>
+        <Cockpit 
+        personsLength={this.state.persons.length}
+        showPersons={this.state.isShow}
+        clicked={this.togglePersonsHandler}/>
         {persons}
       </div>
     );
