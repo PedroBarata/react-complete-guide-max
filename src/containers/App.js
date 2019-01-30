@@ -3,13 +3,26 @@ import classes from "./App.css";
 import Persons from "../components/Persons/Persons";
 import Cockpit from "../components/Cockpit/Cockpit";
 class App extends Component {
-  state = {
-    persons: [
-      { id: "sadasd1", name: "Pedro", age: 25 },
-      { id: "asdfwe1", name: "Test", age: 30 }
-    ],
-    isShow: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      persons: [
+        { id: "sadasd1", name: "Pedro", age: 25 },
+        { id: "asdfwe1", name: "Test", age: 30 }
+      ],
+      isShow: false
+    };
+    console.log('[App.js] Inside constructor()', props);
+  }
+
+  componentWillMount() {
+    console.log('[App.js] Inside componentWillMount()');
+  }
+
+  componentDidMount() {
+    console.log('[App.js] Inside componentDidMount()');
+  }
+  
 
   nameChangedHander = (event, id) => {
     const personIndex = this.state.persons.findIndex(p => p.id === id);
@@ -34,6 +47,7 @@ class App extends Component {
   };
 
   render() {
+    console.log('[App.js] Inside render()');
     let persons = null;
 
     if (this.state.isShow) {
