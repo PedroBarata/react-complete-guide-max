@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import classes from "./App.css";
 import Persons from "../components/Persons/Persons";
 import Cockpit from "../components/Cockpit/Cockpit";
-class App extends Component {
+class App extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,10 +23,10 @@ class App extends Component {
     console.log('[App.js] Inside componentDidMount()');
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+   /* shouldComponentUpdate(nextProps, nextState) {
     console.log('[UPDATE App.js] Inside shouldComponentUpdate()', nextProps, nextState);
     return true;
-  }
+  }  */
 
   componentWillUpdate(nextProps, nextState) {
     console.log('[UPDATE App.js] Inside componentWillUpdate()', nextProps, nextState);
@@ -73,6 +73,7 @@ class App extends Component {
 
     return (
       <div className={classes.App}>
+      <button onClick={() => {this.setState({isShow: true})}}>click!</button>
         <Cockpit 
         personsLength={this.state.persons.length}
         showPersons={this.state.isShow}
