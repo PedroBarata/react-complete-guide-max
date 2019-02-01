@@ -1,10 +1,3 @@
-.Cockpit {
-    margin: auto;
-    font-family: sans-serif;
-    display: block;
-    text-align: center;
-  }
-  
   .red {
     color: red;
   }
@@ -13,22 +6,26 @@
     font-weight: bold;
   }
   
-  .Cockpit button {
+  .Button {
     color: white;
     background-color: green;
     border: 1px solid greenyellow;
     font: inherit;
     padding: 10px;
     cursor: pointer;
+    margin: auto;
+    font-family: sans-serif;
+    display: block;
+    text-align: center;
   }
-  .Cockpit button:hover {
+  .Button:hover {
     background-color: lightgreen;
   }
   
-  .Cockpit button.Red {
+  .Button.Red {
     background-color: red;
   }
   
-  .Cockpit button.Red:hover {
+  .Button.Red:hover {
     background-color: salmon;
   }
