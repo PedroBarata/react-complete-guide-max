@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import classes from "./Person.css";
-import withClass from '../../../hoc/withClass'
-import PropTypes from 'prop-types';
-
+import withClass from "../../../hoc/withClass";
+import PropTypes from "prop-types";
+import { AuthContext } from "../../../containers/App";
 class Person extends Component {
   constructor(props) {
     super(props);
@@ -34,6 +34,9 @@ class Person extends Component {
     console.log("[Person.js] Inside render()");
     return (
       <>
+        <AuthContext.Consumer>
+          {auth => (auth ? <p>I'm Authenticated!</p> : null)}
+        </AuthContext.Consumer>
         <p onClick={this.props.click}>
           I'm {this.props.name} and I have {this.props.age} years old!
         </p>
@@ -52,8 +55,8 @@ class Person extends Component {
 Person.propTypes = {
   click: PropTypes.func,
   name: PropTypes.string,
-  age: PropTypes.number, 
+  age: PropTypes.number,
   changed: PropTypes.func
-}
+};
 
 export default withClass(Person, classes.Person);
