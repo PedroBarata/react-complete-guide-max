@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import classes from "./Person.css";
-import withClass from '../../../hoc/withClass'
+import withClass from "../../../hoc/withClass";
 class Person extends Component {
   constructor(props) {
     super(props);
@@ -13,6 +13,9 @@ class Person extends Component {
 
   componentDidMount() {
     console.log("[Person.js] Inside componentDidMount()");
+    if (this.props.position === 0) {
+      this.inputElement.focus();
+    }
   }
 
   componentWillUnmount() {
@@ -30,6 +33,7 @@ class Person extends Component {
         <p>{this.props.children}</p>
         <input
           type="text"
+          ref={input => (this.inputElement = input)}
           onChange={this.props.changed}
           value={this.props.name}
         />
