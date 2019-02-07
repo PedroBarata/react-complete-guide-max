@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import classes from "./Cockpit.css";
 import { setTimeout } from "timers";
 // import Aux from "../../hoc/Aux";
 
 const cockpit = props => {
+
+  const toggleBtnRef = useRef(null);
 
   let btnClass = classes.Button;
   const objectClassesCss = [];
@@ -21,9 +23,10 @@ const cockpit = props => {
 
   useEffect(() => {
     console.log("[Cockpit.js] useEffect()");
-    setTimeout(() => {
+    /* setTimeout(() => {
       alert("Chamou!");
-    },1000)
+    },1000) */
+    toggleBtnRef.current.click();
   }, []);
 
   useEffect(() => {
@@ -47,7 +50,7 @@ const cockpit = props => {
       <h1>Hi!</h1>
       <p className={objectClassesCss.join(" ")}>Test with dynamic classes!</p>
       {/* Arrow Functions here could be inefficient!!! */}
-      <button className={btnClass} onClick={props.clicked}>
+      <button ref={toggleBtnRef} className={btnClass} onClick={props.clicked}>
         Toggle Persons!
       </button>
       <button onClick={props.login}>Log in!</button>
