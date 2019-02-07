@@ -115,7 +115,7 @@ class App extends PureComponent {
           click!
         </button>
         <Cockpit
-          personsLength={this.state.persons.length}
+          persons={this.state.persons}
           showPersons={this.state.isShow}
           clicked={this.togglePersonsHandler}
           login={this.loginHandler}

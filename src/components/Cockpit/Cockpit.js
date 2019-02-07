@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import classes from "./Cockpit.css";
+import { setTimeout } from "timers";
 // import Aux from "../../hoc/Aux";
 
 const cockpit = props => {
@@ -11,16 +12,26 @@ const cockpit = props => {
     btnClass = [classes.Button, classes.Red].join(" ");
   }
 
-  if (props.personsLength <= 1) {
+  if (props.persons.length <= 1) {
     objectClassesCss.push(classes.red); //classes = ['red'];
   }
-  if (props.personsLength <= 0) {
+  if (props.persons.length <= 0) {
     objectClassesCss.push(classes.bold); //classes = ['red', 'bold'];
   }
 
   useEffect(() => {
     console.log("[Cockpit.js] useEffect()");
-  });
+    setTimeout(() => {
+      alert("Chamou!");
+    },1000)
+  }, []);
+
+
+  useEffect(() => {
+    setTimeout(() => {
+      alert("Chamou ao alterar uma pessoa!");
+    },1000)
+  }, [props.persons]);
 
   return (
     /* A partir do React 16.2, 
