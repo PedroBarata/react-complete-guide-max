@@ -3,8 +3,7 @@ import classes from "./App.css";
 import Persons from "../components/Persons/Persons";
 import Cockpit from "../components/Cockpit/Cockpit";
 import withClass from "../hoc/withClass";
-
-export const AuthContext = React.createContext(false);
+import AuthContext from "../context/auth-context";
 
 class App extends PureComponent {
   constructor(props) {
@@ -121,13 +120,20 @@ class App extends PureComponent {
         >
           click!
         </button>
-        { this.state.showCockpit? <Cockpit
-          persons={this.state.persons}
-          showPersons={this.state.isShow}
-          clicked={this.togglePersonsHandler}
-          login={this.loginHandler}
-        /> : null}
-        <AuthContext.Provider value={this.state.isAuthenticated}>
+        <AuthContext.Provider
+          value={{
+            isAuthenticated: this.state.isAuthenticated,
+            login: this.loginHandler
+          }}
+        >
+          {this.state.showCockpit ? (
+            <Cockpit
+              persons={this.state.persons}
+              showPersons={this.state.isShow}
+              clicked={this.togglePersonsHandler}
+            />
+          ) : null}
+
           {persons}
         </AuthContext.Provider>
       </>

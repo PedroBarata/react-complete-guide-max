@@ -1,11 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import classes from "./Cockpit.css";
 import { setTimeout } from "timers";
+import AuthContext from "../../context/auth-context";
 // import Aux from "../../hoc/Aux";
 
 const cockpit = props => {
 
   const toggleBtnRef = useRef(null);
+  
+  const authContext = useContext(AuthContext)
 
   let btnClass = classes.Button;
   const objectClassesCss = [];
@@ -26,6 +29,7 @@ const cockpit = props => {
     /* setTimeout(() => {
       alert("Chamou!");
     },1000) */
+    console.log(authContext);
     toggleBtnRef.current.click();
   }, []);
 
@@ -53,7 +57,7 @@ const cockpit = props => {
       <button ref={toggleBtnRef} className={btnClass} onClick={props.clicked}>
         Toggle Persons!
       </button>
-      <button onClick={props.login}>Log in!</button>
+      <button onClick={authContext.login}>Log in!</button>
     </>
   );
 };
