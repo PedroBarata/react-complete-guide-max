@@ -26,6 +26,12 @@ const cockpit = props => {
     },1000)
   }, []);
 
+  useEffect(() => {
+    return(() => {
+      console.log("[Cockpit.js] removing useEffect()");
+    });
+  });
+
 
   useEffect(() => {
     setTimeout(() => {

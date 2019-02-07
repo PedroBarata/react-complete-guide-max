@@ -16,7 +16,8 @@ class App extends PureComponent {
       ],
       isShow: false,
       toggleClicked: 0,
-      isAuthenticated: false
+      isAuthenticated: false,
+      showCockpit: true
     };
     console.log("[App.js] Inside constructor()", props);
   }
@@ -38,9 +39,7 @@ class App extends PureComponent {
   }
 
   getSnapshotBeforeUpdate() {
-    console.log(
-      "[UPDATE App.js] Inside getSnapshotBeforeUpdate()"
-    )
+    console.log("[UPDATE App.js] Inside getSnapshotBeforeUpdate()");
   }
 
   /* shouldComponentUpdate(nextProps, nextState) {
@@ -109,17 +108,25 @@ class App extends PureComponent {
       <>
         <button
           onClick={() => {
+            const toggleCockpit = this.state.showCockpit;
+            this.setState({ showCockpit: !toggleCockpit });
+          }}
+        >
+          Show cockpit
+        </button>
+        <button
+          onClick={() => {
             this.setState({ isShow: true });
           }}
         >
           click!
         </button>
-        <Cockpit
+        { this.state.showCockpit? <Cockpit
           persons={this.state.persons}
           showPersons={this.state.isShow}
           clicked={this.togglePersonsHandler}
           login={this.loginHandler}
-        />
+        /> : null}
         <AuthContext.Provider value={this.state.isAuthenticated}>
           {persons}
         </AuthContext.Provider>
