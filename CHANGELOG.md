@@ -1,4 +1,4 @@
-# 0.1.0 (2019-01-29)
+# 0.1.0 (2019-02-07)
 
 
 ### Features
@@ -32,7 +32,30 @@
 * **6.76:** Using Error Boundaries (React 16+) ([c975a83](https://github.com/PedroBarata/react-complete-guide-max/commit/c975a83))
 * **6.76:** Volta do código do 6.67 ([2a86599](https://github.com/PedroBarata/react-complete-guide-max/commit/2a86599))
 * **6.80:** A Better Project Structure ([eb45cfe](https://github.com/PedroBarata/react-complete-guide-max/commit/eb45cfe))
+* **7.100:** Validating Props ([fdab707](https://github.com/PedroBarata/react-complete-guide-max/commit/fdab707))
+* **7.102:** Using references ("ref") ([8497ec6](https://github.com/PedroBarata/react-complete-guide-max/commit/8497ec6))
+* **7.103:** More on React ref API (16.3) ([cdf01b9](https://github.com/PedroBarata/react-complete-guide-max/commit/cdf01b9))
+* **7.103:** More on the React ref API (16.3) ([4afc3a2](https://github.com/PedroBarata/react-complete-guide-max/commit/4afc3a2))
+* **7.104:** The Context API (React 16.3) ([4cd7bdf](https://github.com/PedroBarata/react-complete-guide-max/commit/4cd7bdf))
+* **7.106:** Refs with React Hooks ([f67dcd0](https://github.com/PedroBarata/react-complete-guide-max/commit/f67dcd0))
+* **7.109:** Using contextType & useContext() ([8440f4d](https://github.com/PedroBarata/react-complete-guide-max/commit/8440f4d))
+* **7.139:** [LEGACY] Updated Lifecycle Hooks (React 16.3) ([a9bd657](https://github.com/PedroBarata/react-complete-guide-max/commit/a9bd657))
+* **7.140:** [LEGACY] The "memo" Method (16.4) ([e5e1099](https://github.com/PedroBarata/react-complete-guide-max/commit/e5e1099))
 * **7.81:** Splitting an App Into Components ([dd90c71](https://github.com/PedroBarata/react-complete-guide-max/commit/dd90c71))
+* **7.84:** Converting stateless into stateful components ([18b5519](https://github.com/PedroBarata/react-complete-guide-max/commit/18b5519))
+* **7.85:** Component Creation Lifecycle in Action ([bfb04d6](https://github.com/PedroBarata/react-complete-guide-max/commit/bfb04d6))
+* **7.85:** componentWillUnmount ([a590243](https://github.com/PedroBarata/react-complete-guide-max/commit/a590243))
+* **7.88:** Component Update Lifecycle in Action ([07a8b8e](https://github.com/PedroBarata/react-complete-guide-max/commit/07a8b8e))
+* **7.89:** Updating Lifecycle Hooks in Action (Triggered by State changes) ([0eab30b](https://github.com/PedroBarata/react-complete-guide-max/commit/0eab30b))
+* **7.89:** Using useEffect() in functional components ([88b1420](https://github.com/PedroBarata/react-complete-guide-max/commit/88b1420))
+* **7.89.2:** Controlling the useEffect() behavior ([81a8daf](https://github.com/PedroBarata/react-complete-guide-max/commit/81a8daf))
+* **7.90:** Perfomance Gains with PureComponents ([329e90b](https://github.com/PedroBarata/react-complete-guide-max/commit/329e90b))
+* **7.94:** Returning Adjacent Elements ([5911681](https://github.com/PedroBarata/react-complete-guide-max/commit/5911681))
+* **7.96:** Understanding Higher Order Components (HOCs) ([97177f4](https://github.com/PedroBarata/react-complete-guide-max/commit/97177f4))
+* **7.97:** A Different Approach to HOCs ([ae1477c](https://github.com/PedroBarata/react-complete-guide-max/commit/ae1477c))
+* **7.98:** Passing Unknown Props (Ajuste do component Person.js) ([c3fa9c5](https://github.com/PedroBarata/react-complete-guide-max/commit/c3fa9c5))
+* **7.98:** Passing Unkown Props (Classe anônima dentro de uma função JS) ([ce6ecc3](https://github.com/PedroBarata/react-complete-guide-max/commit/ce6ecc3))
+* **7.99:** Using SetState correctly ([fcb2b36](https://github.com/PedroBarata/react-complete-guide-max/commit/fcb2b36))
 
 
 
