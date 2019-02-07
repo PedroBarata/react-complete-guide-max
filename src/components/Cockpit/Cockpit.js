@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./Cockpit.css";
 // import Aux from "../../hoc/Aux";
 
 const cockpit = props => {
+
   let btnClass = classes.Button;
   const objectClassesCss = [];
 
@@ -16,6 +17,10 @@ const cockpit = props => {
   if (props.personsLength <= 0) {
     objectClassesCss.push(classes.bold); //classes = ['red', 'bold'];
   }
+
+  useEffect(() => {
+    console.log("[Cockpit.js] useEffect()");
+  });
 
   return (
     /* A partir do React 16.2, 
